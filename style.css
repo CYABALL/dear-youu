@@ -1,0 +1,477 @@
+
+/*reset*/
+*{margin: 0;
+ padding:0;
+  box-sizing:border-box;
+ 
+ }
+
+/* Background*/
+body{
+background-color: #FFF9F5;
+  color:#68434A;
+
+
+}
+
+
+/*video background*/
+
+.Hearts-background{
+
+position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  z-index: 0;
+opacity: 2;
+  
+  pointer-events: none;
+}
+
+section {
+  position:relative;
+        z-index: 1;
+        
+        
+        }
+/*4 page section*/
+section {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 40px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+/*5 Heading*/
+h1{
+color:#800020;
+  font-size:2.5rem;
+  margin-bottom: 18px;
+
+/* paragraphs*/
+p {
+  max-width: 500px;
+  line-height: 1.9;
+  margin-bottom: 25px;
+  
+}
+
+
+}
+/*subtitle*/
+.subtitle{
+color:#D9A7B0;
+  font-style: italic;
+}
+
+/* caption*/
+.caption{
+  color:#800020;
+  font-style:italic;
+  font-size: 0.9rem;
+  
+}
+
+/*  Buttons */
+button {
+    background-color: #800020;
+    color: #FFF9F5;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 28px;
+    margin-top: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+section p{
+display: block;
+  margin-bottom:0.1px !important;
+  line-height:1.7;
+
+/*next page*/
+  
+}
+@keyframes pageFade{
+  from{opacity: 0;
+      transform: translateY(15px)};
+
+to
+{opacity:1;
+transform: translateY(0);
+}
+}
+
+section:not([hidden]) {
+  animation: pageFade 1s ease;
+}
+
+section[hidden]{
+  display:none !important;
+}
+
+/*button*/
+button{
+  transition:transform 3s ease,
+    box-shadow 3s ease;
+  
+}
+button:hover
+{transform:translateY(-3px)
+ scale(1.04);
+ box-shadow: 0 5px 15px rgba(128,0,32,0.2);
+ 
+             
+             }
+
+button:active{
+  transform:scale(0.96);
+}
+
+/*glow heading*/
+
+h1 {
+    text-shadow: 5px 3px 12px rgba(217, 167, 176, 0.3);
+}
+
+
+/*Text entrance*/
+@keyframes textAppear {
+
+from{
+  opacity:0;
+  transform:translateY(12px);
+}
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+  
+}
+section h1,
+section p,
+section button {
+  animation:textAppear 0.9 s ease both;
+}
+
+
+
+/* photo frame*/
+.polaroid {
+    background-color: #FFFFFF;
+    padding: 10px 10px 35px;
+    width: 230px;
+
+    box-shadow: 0 5px 18px rgba(104, 67, 74, 0.15);
+
+    border: 1px solid #F1E1E2;
+    border-radius: 3px;
+
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* polaroid photo */
+.polaroid img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+/* HOVER EFFECT */
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.04);
+    box-shadow: 0 10px 25px rgba(104, 67, 74, 0.2);
+}
+
+/* polaroid plus capt */
+.polaroid-caption {
+    margin-top: 12px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #800020;
+    font-size: 14px;
+}
+
+
+/*Final Question*/
+.Final-Question{
+font-size: 2.5rem;
+  line-height: 1.25;
+  color: #800020;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 20px 30px 12px rgb(217,167,176,0.3);
+
+  
+}
+@media (max-width: 480px) {
+    .final-question {
+        font-size: 2rem;
+    }
+}
+
+/*yes no */
+.answer-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.answer-buttons button {
+    min-width: 120px;
+    padding: 14px 28px;
+    margin-top: 0;
+    font-size: 1rem;
+    border-radius: 30px;
+}
+
+/* YES */
+.yes-button {
+    background-color: #800020;
+    color: #FFF9F5;
+    box-shadow: 0 4px 12px rgba(128, 0, 32, 0.15);
+}
+
+/* NO */
+.no-button {
+    background-color: #FFF9F5;
+    color: #800020;
+    border: 1px solid #D9A7B0;
+  
+}
+
+/* HOVER */
+.yes-button:hover {
+    background-color: #68434A;
+}
+
+.no-button:hover {
+    background-color: #F8E5E8;
+}
+
+
+/* Tablet laptop */
+section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 24px;
+}
+
+section p {
+    width: 100%;
+    max-width: 600px;
+}
+
+.polaroid {
+    width: min(280px, 85vw);
+}
+
+/* HP */
+@media (max-width: 600px) {
+    section {
+        min-height: 100vh;
+        padding: 35px 18px;
+    }
+
+    h1 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    section p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .polaroid {
+        width: min(245px, 82vw);
+    }
+
+    .answer-buttons {
+        gap: 12px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
+
+/* Laptop layar besar */
+@media (min-width: 1024px) {
+    section {
+        padding: 60px 40px;
+    }
+
+    section p {
+        max-width: 650px;
+    }
+
+    .polaroid {
+        width: 300px;
+    }
+}
+.no-button {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.no-button.vanish {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.celebration {
+    position: relative;
+    width: min(300px, 85vw);
+    margin: 20px auto;
+}
+
+.kiss {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.Catlily {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    
+
+}
+.happy {
+    position: absolute;
+    width: 62px;
+    height: 65px;
+    object-fit: contain;
+
+    top: -10px;
+    right: -15px;
+
+    transform: rotate(15deg);
+    z-index: 3;
+
+    pointer-events: none;
+}
+.happy2 {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+
+    top: -10px;
+
+
+left: -15px;
+transform: rotate(-15deg);
+z-index: 4;
+    pointer-events: none;
+}
+
+/* affinity polaroid lily */
+
+.affinity-wrapper {
+    position: relative;
+    width: min(280px, 85vw);
+    margin: 25px auto 35px;
+
+    transition: transform 0.35s ease;
+    transform: rotate(-3deg);
+}
+
+/* Polaroid */
+
+.affinity-wrapper .polaroid {
+    width: 100%;
+    transform: none;
+    transition: none;
+}
+
+/* Lily  */
+
+.affinity-lily {
+    position: absolute;
+
+    width: 190px;
+    height: 200px;
+
+    right: -48px;
+    bottom: -48px;
+
+    object-fit: contain;
+    z-index: 5;
+    pointer-events: none;
+
+    filter: drop-shadow(2px 4px 5px rgba(104, 67, 74, 0.15));
+}
+
+.rotate-lily {
+    position: absolute;
+
+    width: 150px;
+    height: 160px;
+
+    top: -45px;
+    left: -45px;
+
+    object-fit: contain;
+    z-index: 5;
+    pointer-events: none;
+
+    filter: drop-shadow(2px 4px 5px rgba(104, 67, 74, 0.15));
+}
+
+
+
+
+
+
+/* Gerak*/
+
+.affinity-wrapper:active {
+    transform: rotate(0deg) scale(1.04);
+}
+
+@media (hover: hover) {
+    .affinity-wrapper:hover {
+        transform: rotate(0deg) scale(1.04);
+    }
+}
+
+@media (max-width: 480px) {
+    .affinity-lily {
+        width: 170px;
+        height: 185px;
+        right: -45px;
+        bottom: -38px;
+    }
+}
+

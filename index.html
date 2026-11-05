@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+ <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+    <tittle>Our Little Story</tittle>
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>    
+<img src = "assets/Hearts.gif"
+  class = "Hearts-background">
+
+
+
+    
+<!-- Page 1 Opening-->
+
+    
+    <section id="page1">
+      <h1>A Little Something For You </h1>
+      <p>For The Girl Who Made My Ordinary Days Feel Special</p>
+      <p class="caption">Made With Love♡</p>
+     
+      <button onclick="playSound('popSound');nextPage(2)">Open Me
+      
+      </button>
+    </section>
+  
+<!-- Page 2 Start-->
+
+        <section id="page2"hidden>
+      <h1>Where It All Began</h1>
+
+
+          <p class="subtitle"> A Random Encounter</p>
+
+          
+      <p>Funny How We Met Through a Game..</p>
+        
+        <p>I Never Expected To Meet Someone Who Would Eventually become Such An Important Part Of My Life
+        
+        
+        </p>
+        
+        <p>What started as simple game slowly turn in to conversation, shared laughs, and moments that i cheerish the most </p>
+          
+        <p>Who knew such a game could lead me to someone like you?</p>
+      
+      <button onclick="playSound('popSound');nextPage(3)">Continue</button>
+    </section>
+
+
+<!--Page 3 Late Night Calls-->
+
+    
+<section id="page3"hidden>
+
+<h1>Our late Night Calls</h1>
+<p class="subtitle">Every Night Became My Favourite When You're Around</p>
+  
+   <p>Somehow, our conversation became part of my everyday routine from random talks and silly jokes to sharing our little stories and talking about how our days went, I started looking forward to every little moment we shared..  </p>
+
+  
+<p> I never thought a simple call could mean this much to me.</p>
+
+
+  <p class="caption">A few more minutes turned in to hours♡</p>
+
+  <button onclick="playSound('popSound');nextPage(4)">Continue</button>
+
+  
+</section>
+
+    
+<!--Our Affinity-->
+
+
+<section id="page4"hidden>
+
+<h1>Our Affinity</h1>
+<p class="subtitle">Well That Was Unexpected...</p>
+
+<div class="affinity-wrapper">
+
+    <div class="polaroid">
+        <img src="assets/Affinity.jpg" alt="Our memory">
+
+        <p class="polaroid-caption">
+            A Litte Plot Twist♡
+        </p>
+    </div>
+
+    <img
+        src="assets/lily.png"
+        alt=""
+        class="affinity-lily"
+    >
+
+<img
+  src="assets/Lily Rotate.png"
+  alt=""
+  class="rotate-lily">
+
+
+  
+</div>
+  
+  
+   <p>Remember when we started with bff affinity??  </p>
+  
+<p> I was actually planning to ask you for an upgrade someday which is this day..</p>
+<p>Buutt ternyataa kamu sudah mendahului my ide</p>
+  <p>Guess i don't have to ask anymore ,yeahh??</p>
+
+  <p class="caption">Didn't see that coming, but i'm definitely not complaining♡</p>
+
+  <button onclick="playSound('popSound');nextPage(5)">Continue</button>
+
+  
+</section>
+
+
+    <!--Confession-->
+<section id="page5"hidden>
+
+<h1>The Confession</h1>
+<p class="subtitle">Okaay Jokes Aside For A Moment...</p>
+<p>I think you've become more important to me than i ever expected</p>
+   <p>somewhere along the way, i realise that what i feel for you is more than just friendship, I enjoy having you in my life, aand somehow, i find myself to be closer to you than we are now</p>
+<p>I know that i genuinely enjoy having you around,even in the simplest moment</p>
+<p>I just want to be honest,about what i feel</p>
+  <p>Aand No matter what happen after this, i just wanted you to know how much you mean to me</p>
+
+
+  <button onclick="playSound('popSound');nextPage(6)">Continue</button>
+
+  
+</section>
+
+
+    <!-- question-->
+
+    
+<section id="page6"hidden>
+
+<h1>The Final Question</h1>
+<p class="subtitle">Remember That Reels You Sent Me???</p>
+   <p>"If my answer was yes, what would your answer be?"</p>
+<p>Weell I guess I never actually asked that question did i??</p>
+<p>Soooo here I am ,finally asking it</p>
+<p>I've shared everything I feel, aaand there's just one thing left to ask...</p>
+
+  
+<h2 class = "Final-Question">Will You Be My Girlfriend?</h2>
+
+
+
+  <div class="answer-buttons">
+    <button class="yes-button" onclick="playSound('Yippee');
+      nextPage(7)">
+        Yeess!!♡
+    </button>
+
+    <button class="no-button" id="noButton" >
+        No
+    </button>
+</div>
+  
+</section>
+
+
+<section id="page7"hidden>
+<h1>YEEAAAAAYYY,LOVE YOUU SOO MUCHH</h1>
+  
+  <div class="celebration">
+<img src = "assets/kiss.gif"
+    class = "kiss">
+<img src = "assets/Catlily.png"
+  class = "Catlily">
+<img src = "assets/happy.gif"
+  class = "happy">
+<img src = "assets/happy(1).gif"
+  class = "happy2">
+   </div>
+
+  
+
+</section>
+
+<section id="page8"hidden>
+<div class="polaroid">
+    <img src="assets/Reel.jpg" alt="Reel">
+
+    <p class="polaroid-caption">
+        Reconsideration Pweaseee🥺
+      
+    </p>
+
+
+  
+</div>
+
+  <button onclick="playSound('Yippee');nextPage(6)">
+Back To The Question ♡
+
+    
+  </button>
+</section>
+
+
+
+
+    
+<script>
+  
+
+function nextPage(pageNumber) {
+    // hide page
+    for (let i = 1; i <= 9; i++) {
+        const page = document.getElementById("page" + i);
+
+        if (page) {
+            page.hidden = true;
+        }
+    }
+
+    // show page tujuan
+    const selectedPage = document.getElementById("page" + pageNumber);
+
+    if (!selectedPage) {
+        console.log("Page " + pageNumber + " tidak ditemukan!");
+        return;
+    }
+
+    selectedPage.hidden = false;
+
+    // Ambil background music
+    const page7Sound = document.getElementById("page7Sound");
+    const page8Sound = document.getElementById("page8Sound");
+
+    // stop all background music
+    [page7Sound, page8Sound].forEach(sound => {
+        if (sound) {
+            sound.pause();
+            sound.currentTime = 0;
+        }
+    });
+
+    // Musik Page 7
+    if (pageNumber === 7 && page7Sound) {
+        page7Sound.play().catch(error => {
+            console.log("Audio error:", error);
+        });
+    }
+
+    // Musik Page 8
+    if (pageNumber === 8 && page8Sound) {
+        page8Sound.play().catch(error => {
+            console.log("Audio error:", error);
+        });
+    }
+}
+
+
+// Sound tombol
+function playSound(soundId) {
+    const sound = document.getElementById(soundId);
+
+    if (sound) {
+        sound.currentTime = 0;
+        sound.play().catch(error => {
+            console.log("Sound error:", error);
+        });
+    }
+}
+
+
+// Tombol No
+let noMoves = 0;
+
+const noButton = document.getElementById("noButton");
+
+if (noButton) {
+    noButton.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        if (noMoves < 5) {
+            noMoves++;
+
+            playSound("vanishSound");
+
+            noButton.classList.add("vanish");
+
+            setTimeout(() => {
+
+                const positions = [
+                    ["60px", "-40px"],
+                    ["-60px", "40px"],
+                    ["-70px", "125px"],
+                    ["89px", "60px"],
+                    ["-130px", "200px"]
+                ];
+
+                noButton.style.transform =
+                    `translate(${positions[noMoves - 1][0]}, ${positions[noMoves - 1][1]})`;
+
+                noButton.classList.remove("vanish");
+
+            }, 1500);
+
+        } else {
+            nextPage(8);
+        }
+    });
+}
+
+</script>
+    
+<audio id="popSound" src="assets/pop.aac" preload="auto"></audio>
+
+<audio id="vanishSound" src="assets/pop%20vanish.aac" preload="auto"></audio>
+
+<audio id="page7Sound" src="assets/happy.mp3" loop preload="auto"></audio>
+
+<audio id="page8Sound" src="assets/Violin.mp3" loop preload="auto"></audio>
+
+    <audio id="Yippee" src="assets/Yippee.mp3" preload="auto"></audio>
+  
+  
+  
+  </body>
+
+  
+  
+
+</html>  
